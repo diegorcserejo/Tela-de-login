@@ -50,11 +50,11 @@ h1 {
 
 .input-box label {
     position: absolute;
-    left: 5%;
-    transform: translateY(-50%);
+    left: 2%;
+    transform: translateY(-80%);
     color: #fff;
     font-size: 1rem;
-    top: 20px;
+    top: 10px;
     transition: .6s;
 }
 
@@ -98,7 +98,10 @@ input {
     color: #fff;
     padding: 0 35px 0 5px;
     outline: none;
+
 }
+
+
 
 input:focus ~ label {
     top: -5px;
@@ -127,13 +130,14 @@ button {
 button:hover {
     background-color: #1c1c1c;
     color: #fff;
+    color: #ffffff60;
 }
 
 .register-link {
     font-size: 0.9rem;
     color: #fff;
     text-align: center;
-    margin: 25px 0 10px;
+    margin: 25px 0px 10px;
 }
 
 .register-link p a {
@@ -147,10 +151,11 @@ button:hover {
 }
 
 #message {
-    color: #fff;
+    background-color: #fff;
     font-size: 0.9rem;
     text-align: center;
     margin-top: 10px;
+    border-radius: 10px;
 }
 
 @keyframes snowfall {

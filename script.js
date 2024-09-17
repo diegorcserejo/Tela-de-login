@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const audio = document.getElementById('backgroundMusic');
 
-    audio.volume = 0.1;
+    audio.volume = 0.2;
 
     function playMusic() {
         audio.play().catch(error => {
@@ -33,23 +33,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('#loginForm').addEventListener('submit', (e) => {
         e.preventDefault();
-        
-        const username = document.querySelector('#username').value.trim();
-        const password = document.querySelector('#password').value.trim();
-        const messageElement = document.querySelector('#message');
 
-        if (username === '' || password === '') {
-            messageElement.textContent = 'Por favor, preencha todos os campos.';
-            messageElement.style.color = '#d9534f'; 
-            return;
-        }
+        let username = document.getElementById('username').value.trim();
+        let password = document.getElementById('password').value.trim();
+        let msg = document.getElementById('message');
 
         if (username === 'admin' && password === 'admin123') {
-            messageElement.textContent = 'Login efetuado com sucesso!';
-            messageElement.style.color = '#1ED760'; 
-        } else {
-            messageElement.textContent = 'Usuário ou senha inválidos.';
-            messageElement.style.color = '#d9534f'; 
+            msg.innerHTML = '<strong>Login efetuado com sucesso!</strong>';
+            msg.style.color = '#1ED760';
+            msg.style.border = '2px solid #1ED760';      
+        } else { 
+            msg.innerHTML = '<strong>Usuário ou senha inválidos.</strong>';
+            msg.style.color = '#d9534f';
+            msg.style.border = '2px solid #d9534f';
         }
     });
 });
